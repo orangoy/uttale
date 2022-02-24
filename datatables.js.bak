@@ -1,0 +1,18 @@
+/* Map $ to Jquery  */ (function($) {
+
+	
+$(document).ready(function() {
+
+    $('#arkiv').parent().removeClass('entry-the-content');
+
+    
+    $('#arkiv').DataTable();
+} );
+	
+
+
+
+
+
+
+/* end */ })( jQuery );
