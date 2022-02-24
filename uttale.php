@@ -31,3 +31,5 @@ add_shortcode('uttale', 'vis_uttale');
 
 // Include installation scripts
 include plugin_dir_path( __FILE__ ) . "install.php";
+
+
