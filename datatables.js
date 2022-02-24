@@ -1,6 +1,5 @@
 /* Map $ to Jquery  */ (function($) {
 
-	
 $(document).ready(function() {
 
     $('#arkiv').parent().removeClass('entry-the-content');
@@ -8,8 +7,11 @@ $(document).ready(function() {
     
     $('#arkiv').DataTable( {
         initComplete: function () {
+
             this.api().columns().every( function () {
+
                 var column = this;
+
                 var select = $('<select><option value=""></option></select>')
                     .appendTo( $(column.header()).empty() )
                     .on( 'change', function () {
@@ -24,21 +26,12 @@ $(document).ready(function() {
  
                 column.data().unique().sort().each( function ( d, j ) {
                     select.append( '<option value="'+d+'">'+d+'</option>' )
+
                 } );
             } );
         }
     } );
 } );    
     
-    
-    
-    
-
-	
-
-
-
-
-
 
 /* end */ })( jQuery );
