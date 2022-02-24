@@ -10,7 +10,7 @@ function uttale_install() {
 	global $wpdb;
 	global $uttale_db_version;
 
-	$table_name = $wpdb->prefix . 'custom_uttale_skrivemate_test';
+	$table_name = $wpdb->prefix . 'custom_uttale_skrivemate';
 
 	$charset_collate = $wpdb->get_charset_collate();
 
@@ -37,7 +37,7 @@ function uttale_install() {
 function uttale_install_data() {
 	global $wpdb;
 
-	$table_name = $wpdb->prefix . 'custom_uttale_skrivemate_test';
+	$table_name = $wpdb->prefix . 'custom_uttale_skrivemate';
 
 // The actual data to be installed
 
