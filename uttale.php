@@ -24,4 +24,3 @@ include plugin_dir_path( __FILE__ ) . "vis_uttale.php";
 // Add function and shortcode
 add_action('wp_enqueue_scripts', 'setup_scripts');
 add_shortcode('uttale', 'vis_uttale');
-
