@@ -22,7 +22,7 @@ function vis_uttale(){
                 <th>Eksempel</th>
                 <th>Lånt fra</th>
                 <th>Uttale (Østlandsk)</th>
-                <th>Ordkommentar</th>                
+                <!-- <th>Ordkommentar</th> -->                
             </tr>
         </thead>
         <tbody>';
@@ -41,7 +41,7 @@ function vis_uttale(){
 		$dt  .= "<td>" . $result->eksempel . "</td>";
 		$dt  .= "<td>" . $result->lant_fra . "</td>";
 		$dt  .= "<td>" . $result->eksempel_ipa_ostlandst . "</td>";
-		$dt  .= "<td>" . $result->ordkommentar . "</td>";
+		// $dt  .= "<td>" . $result->ordkommentar . "</td>";
 		$dt  .= "</tr>";
 
 	}
@@ -59,7 +59,7 @@ function vis_uttale(){
                 <th>Eksempel</th>
                 <th>Lånt fra</th>
                 <th>Uttale (Østlandsk)</th>
-                <th>Ordkommentar</th>                
+                <!-- th>Ordkommentar</th> -->                
             </tr>
         </tfoot>
     </table>';

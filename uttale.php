@@ -9,6 +9,10 @@
  * Author URI: https://www.rangoy.com
  */
 
+// Install tables and data on activation
+register_activation_hook( __FILE__, 'uttale_install' );
+register_activation_hook( __FILE__, 'uttale_install_data' );
+
 // Setup datatables
 function setup_scripts() {
         wp_register_style('datatables', "https://cdn.datatables.net/1.11.4/css/jquery.dataTables.css");
@@ -24,3 +28,6 @@ include plugin_dir_path( __FILE__ ) . "vis_uttale.php";
 // Add function and shortcode
 add_action('wp_enqueue_scripts', 'setup_scripts');
 add_shortcode('uttale', 'vis_uttale');
+
+// Include installation scripts
+include plugin_dir_path( __FILE__ ) . "install.php";
