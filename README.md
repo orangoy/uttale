@@ -1,4 +1,4 @@
-#How to install plugin in Wordpress
+# How to install plugin in Wordpress
 
 1. Download project files as zip-file
 2. Install plugin in Wordpress by "Upload plugin"
