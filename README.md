@@ -1,4 +1,3 @@
-
 #How to install plugin in Wordpress
 
 1. Download project files as zip-file
