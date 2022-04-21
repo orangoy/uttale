@@ -22,7 +22,7 @@ function setup_scripts() {
         wp_enqueue_style('datatables');
  
         wp_enqueue_script('datatables', "https://cdn.datatables.net/1.11.4/js/jquery.dataTables.js", array('jquery'));
-        wp_enqueue_script('datatables-config', '/wp-content/plugins/uttale/datatables.js', array( 'datatables' ));
+        wp_enqueue_script('datatables-config', plugin_dir_url( __FILE__ ) . 'datatables.js', array( 'datatables' ));
 }
 // Add function and shortcode
 add_action('wp_enqueue_scripts', 'setup_scripts');
