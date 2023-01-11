@@ -36,6 +36,16 @@ $(document).ready(function() {
                 data: dataSet.data,
                 rowId: 'id',
 
+                language: {
+                    "url": "//cdn.datatables.net/plug-ins/1.13.1/i18n/no-NB.json"
+                },
+
+                searchCols: [
+                    null,
+                    null,
+                    null,
+                    {'search': 'Velg ...' },
+                ],
                 columnDefs: [
                     { "visible": false, "targets": [1,2,5,6,7,8,9,10]},
                     /* { "searchable": false, "targets": [0,1,2,4,5,6,7,8,9,10] } */
@@ -61,8 +71,6 @@ $(document).ready(function() {
 
                 ],
 
-
-
                 "order": [[1, 'asc']],
                 dom: 'Blfrtip',
                 buttons:['createState', 'savedStates'],
@@ -80,7 +88,7 @@ $(document).ready(function() {
 
                             /* */
 
-                            var select = $('<select><option value=""></option></select>')
+                            var select = $('<select><option value="Velg ...">Velg ...</option></select>')
                                 .appendTo( $(column.header()))
                                 .on( 'change', function () {
                                     var val = $.fn.dataTable.util.escapeRegex(
@@ -91,9 +99,14 @@ $(document).ready(function() {
                                         .draw();
                                 } );
 
+
+
+
                             column.data().unique().sort().each( function ( d, j ) {
                                 select.append( '<option value="'+d+'">'+d+'</option>' )
                             } );
+
+
 
                             /* */
 
@@ -108,7 +121,9 @@ $(document).ready(function() {
     table.on('stateLoaded', (e, settings, data) => {
         for(var i = 0; i < data.childRows.length; i++) {
             var row = table.row(data.childRows[i]);
-            row.child(format(row.data())).show();
+            row.child(format(row.data())).show().reload();
+
+
         }
     });
 
@@ -149,8 +164,6 @@ $(document).ready(function() {
 
 
 
-
-
 } );    
     
 
@@ -163,10 +176,6 @@ function isBlank(str) {
 /* Formatting function for row details */
 function format ( d ) {
     // `d` is the original data object for the row
-
-
-
-
     cnthtml =  '\n\n\n\n\n<table cellpadding="5" cellspacing="0" border="0" >';
 
     /*
