@@ -1,9 +1,21 @@
 
+#arkiv_filter { padding-bottom: 5px}
+#arkiv_length { padding-top: 10px}
+#arkiv_length > label > select { padding: 0}
 
+
+table.dataTable { width: 100%; }
+
+.tonem1 { color: red;}
+.tonem2 { color: blue;}
+
+
+/*
 th { font-size: 10px; }
 td { font-size: 10px; }
-
+ */
 
 select {
     max-width: 60px;
 }
+
