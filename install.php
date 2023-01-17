@@ -870,7 +870,7 @@ $sql = "REPLACE INTO `wp_custom_uttale_skrivemate` (`ID`, `kons_vok`, `gruppe`, 
 (826, 'vok', 'au, ou, oi, ui', '<ow>', 'fremmedord', '', 'ɔ͜ʊ', 'knowhow', 'engelsk', '¹nɔ͜ʊhɑ͜ʊ', ''),
 (827, 'vok', 'au, ou, oi, ui', '<ow>', 'fremmedord', '', 'ɔ͜ʊ', 'show ', 'engelsk', '¹ʃɔ͜ʊ', ''),
 (828, 'vok', 'au, ou, oi, ui', '<ui>', 'regel', '', 'ʉ͜ɪ', 'hui!', '', '¹hʉ͜ɪ', '');
-"
+";
 
 // Run SQL and log result
 plugin_log($wpdb->query($sql));
