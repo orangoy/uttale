@@ -8,9 +8,9 @@ function vis_uttale_skrift(){
 
 	$results = $wpdb->get_results( "SELECT 
 	kons_vok,gruppe,grafem,regeltype,forklaring,ipa,
-	group_concat(eksempel separator '<br>') eksempel,
+	group_concat(distinct eksempel order by eksempel separator '<br>') eksempel,
 	group_concat(distinct lant_fra separator '<br>') lant_fra,
-	group_concat(concat('<span class=ipa_eksempel>',eksempel_ipa_ostlandsk,'</span>') separator '<br>') eksempel_ipa_ostlandsk,
+	group_concat(distinct concat('<span class=ipa_eksempel>',eksempel_ipa_ostlandsk,'</span>') order by eksempel separator '<br>') eksempel_ipa_ostlandsk,
 	group_concat(distinct ordkommentar separator '<br>') ordkommentar 
 	FROM {$wpdb->prefix}custom_uttale_skrivemate 
 	group by kons_vok,gruppe,grafem,regeltype,forklaring,ipa
