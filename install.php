@@ -2,7 +2,7 @@
 
 
 global $uttale_db_version;
-$uttale_db_version = '1.0';
+$uttale_db_version = '1.1';
 
 
 function uttale_install() {
