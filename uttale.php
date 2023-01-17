@@ -28,12 +28,12 @@ function setup_scripts() {
 add_action('wp_enqueue_scripts', 'setup_scripts');
 
 
+// Main functions
+include plugin_dir_path( __FILE__ ) . "vis_skrift_uttale.php";
+add_shortcode('skrift_uttale', 'vis_skrift_uttale');
 
-// Main function
-include plugin_dir_path( __FILE__ ) . "vis_uttale.php";
 
-
-add_shortcode('uttale', 'vis_uttale');
-
+include plugin_dir_path( __FILE__ ) . "vis_uttale_skrift.php";
+add_shortcode('uttale_skrift', 'vis_uttale_skrift');
 
 

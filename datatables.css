@@ -1,7 +1,23 @@
 
+
+/*
 #arkiv_filter { padding-bottom: 5px}
 #arkiv_length { padding-top: 10px}
 #arkiv_length > label > select { padding: 0}
+*/
+
+
+/* Hide the unnecessary filters */
+#skrift_uttale_filter { display: none}
+#skrift_uttale_length { display: none}
+#skrift_uttale_info { display: none}
+#skrift_uttale_paginate { display: none}
+
+
+#uttale_skrift_filter { display: none}
+#uttale_skrift_length { display: none}
+#uttale_skrift_info { display: none}
+#uttale_skrift_paginate { display: none}
 
 
 table.dataTable { width: 100%; }
@@ -13,9 +29,12 @@ table.dataTable { width: 100%; }
 /*
 th { font-size: 10px; }
 td { font-size: 10px; }
- */
+
 
 select {
-    max-width: 60px;
+    max-width: 100px;
 }
+
+
+ */
 
