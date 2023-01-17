@@ -1,9 +1,7 @@
 <?php
 
-
 global $uttale_db_version;
-$uttale_db_version = '1.2';
-
+$uttale_db_version = '1.300';
 
 function uttale_install() {
 
@@ -14,7 +12,7 @@ function uttale_install() {
 
 	$charset_collate = $wpdb->get_charset_collate();
 
-	$sql = "CREATE TABLE $table_name (
+$sql = "CREATE TABLE $table_name (
 	`ID` int(11) NOT NULL,
   `kons_vok` varchar(11),
   `gruppe` varchar(50),
@@ -41,7 +39,7 @@ function uttale_install_data() {
 
 // The actual data to be installed
 
-$sql = "REPLACE INTO `wp_custom_uttale_skrivemate` (`ID`, `kons_vok`, `gruppe`, `grafem`, `regeltype`, `forklaring`, `ipa`, `eksempel`, `lant_fra`, `eksempel_ipa_ostlandsk`, `ordkommentar`) VALUES
+$sql = "REPLACE INTO $table_name  (`ID`, `kons_vok`, `gruppe`, `grafem`, `regeltype`, `forklaring`, `ipa`, `eksempel`, `lant_fra`, `eksempel_ipa_ostlandsk`, `ordkommentar`) VALUES
 (1, 'kons', 'b, p', '<b>', 'regel', '', 'b', 'briller', '', '²bɾɪlːəɾ', ''),
 (2, 'kons', 'b, p', '<b>', 'regel', '', 'b', 'bjørkebark', '', '²bjœɾːkʲəbɑɾːkʲʰ', ''),
 (3, 'kons', 'b, p', '<b>', 'regel', '', 'b', 'kebab', '', '¹kʲʰeːbɑb', ''),
@@ -869,8 +867,8 @@ $sql = "REPLACE INTO `wp_custom_uttale_skrivemate` (`ID`, `kons_vok`, `gruppe`, 
 (825, 'vok', 'au, ou, oi, ui', '<ow>', 'fremmedord', '', 'ɔ͜ʊ', 'blowout', 'engelsk', '¹blɔ͜ʊɑ͜ʊtʰ', ''),
 (826, 'vok', 'au, ou, oi, ui', '<ow>', 'fremmedord', '', 'ɔ͜ʊ', 'knowhow', 'engelsk', '¹nɔ͜ʊhɑ͜ʊ', ''),
 (827, 'vok', 'au, ou, oi, ui', '<ow>', 'fremmedord', '', 'ɔ͜ʊ', 'show ', 'engelsk', '¹ʃɔ͜ʊ', ''),
-(828, 'vok', 'au, ou, oi, ui', '<ui>', 'regel', '', 'ʉ͜ɪ', 'hui!', '', '¹hʉ͜ɪ', '');
-";
+(828, 'vok', 'au, ou, oi, ui', '<ui>', 'regel', '', 'ʉ͜ɪ', 'hui!', '', '¹hʉ͜ɪ', '');";
+
 
 // Run SQL and log result
 plugin_log($wpdb->query($sql));
