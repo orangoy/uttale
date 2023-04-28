@@ -40,7 +40,7 @@ function vis_uttale_skrift(){
 		$entry['grafem']       = str_replace( ">", "&gt;", str_replace( "<", "&lt;", $result->grafem ) );
 		$entry['regeltype']    = $result->regeltype;
 		$entry['eksempel']   =   $result->eksempel;
-		$entry['forklaring']   = $result->forklaring;
+		$entry['forklaring']   = htmlspecialchars($result->forklaring);
 		$entry['lant_fra']     = $result->lant_fra;
 		$entry['eksempel_ipa'] = $result->eksempel_ipa_ostlandsk;
 		$entry['ordkommentar'] = $result->ordkommentar;
