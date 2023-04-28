@@ -3,7 +3,7 @@
  * Plugin Name: Norsk uttale
  * Plugin URI: https://www.valodumaja.lv/no/sprakenes-hus/
  * Description: Norsk uttale
- * Version: 1.300
+ * Version: 1.400
  * Text Domain: uttale-norsk
  * Author: Øyvind Rangøy
  * Author URI: https://www.rangoy.com
